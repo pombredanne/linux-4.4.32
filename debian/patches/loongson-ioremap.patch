@@ -1,0 +1,13 @@
+Description: Fix CONFIG_64BIT check
+
+--- linux-4.4.32.orig/arch/mips/include/asm/mach-loongson64/ioremap.h
++++ linux-4.4.32/arch/mips/include/asm/mach-loongson64/ioremap.h
+@@ -24,7 +24,7 @@ static inline phys_addr_t fixup_bigphys_
+ static inline void __iomem *plat_ioremap(phys_addr_t offset, unsigned long size,
+ 	unsigned long flags)
+ {
+-#if CONFIG_64BIT
++#if defined(CONFIG_64BIT)
+ #define LOONGSON_UNCACHED_ACCEL_BASE _AC(0xb800000000000000, UL)
+ 	u64 base = LOONGSON_UNCACHED_ACCEL_BASE;
+ 
