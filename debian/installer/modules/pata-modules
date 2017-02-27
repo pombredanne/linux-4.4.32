@@ -1,5 +1,5 @@
 # Include PATA drivers by default
-drivers/ata/pata_*
+#drivers/ata/pata_*
 
 # Exclude pata_sis, which goes in sata-modules as a dependency of sata_sis
 pata_sis -

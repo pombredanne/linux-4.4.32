@@ -1,5 +1,5 @@
 # Include SATA drivers by default
-drivers/ata/sata_*
+#drivers/ata/sata_*
 
 # sata-sis depends on pata-sis; avoid a dependency
 pata_sis ?

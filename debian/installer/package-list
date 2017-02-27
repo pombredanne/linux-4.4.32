@@ -10,7 +10,7 @@ Description: Linux kernel binary image for the Debian installer
  Debian system.
 
 Package: nic-modules
-Depends: kernel-image, nic-shared-modules, core-modules, i2c-modules, crc-modules
+Depends: kernel-image, core-modules, i2c-modules, crc-modules
 Provides: nic-extra-modules
 Priority: standard
 Description: NIC drivers
@@ -18,18 +18,11 @@ Description: NIC drivers
  for the kernel.
 
 Package: nic-wireless-modules
-Depends: kernel-image, nic-shared-modules, core-modules, usb-modules, mmc-modules, pcmcia-modules, crc-modules
+Depends: kernel-image, core-modules, usb-modules, mmc-modules, pcmcia-modules, crc-modules
 Priority: standard
 Description: Wireless NIC drivers
  This package contains wireless NIC drivers for the kernel.
  Includes crypto modules only needed for wireless (WEP, WPA).
-
-Package: nic-shared-modules
-Depends: kernel-image
-Priority: standard
-Description: Shared NIC drivers
- This package contains NIC drivers needed by combinations of nic-modules,
- nic-pcmcia-modules, nic-usb-modules and nic-wireless-modules.
 
 Package: serial-modules
 Depends: kernel-image, pcmcia-modules
@@ -49,18 +42,6 @@ Priority: optional
 Description: PPP drivers
  This package contains PPP drivers for the kernel.
 
-Package: pata-modules
-Depends: kernel-image, ata-modules
-Priority: standard
-Description: PATA drivers
- This package contains PATA drivers for the kernel.
-
-Package: cdrom-core-modules
-Depends: kernel-image, scsi-core-modules, isofs-modules
-Priority: standard
-Description: CDROM support
- This package contains core CDROM support for the kernel.
-
 Package: firewire-core-modules
 Depends: kernel-image, scsi-core-modules, crc-modules
 Priority: standard
@@ -74,16 +55,10 @@ Description: Core SCSI subsystem
  This package contains the core SCSI subsystem for the kernel.
 
 Package: scsi-modules
-Depends: kernel-image, scsi-core-modules, cdrom-core-modules, core-modules, ata-modules
+Depends: kernel-image, scsi-core-modules, core-modules
 Priority: standard
 Description: SCSI drivers
  This package contains SCSI drivers for the kernel.
-
-Package: loop-modules
-Depends: kernel-image
-Priority: standard
-Description: Loopback filesystem support
- This package contains loopback filesystem support for the kernel.
 
 Package: ipv6-modules
 Depends: kernel-image
@@ -96,20 +71,6 @@ Depends: kernel-image, core-modules, crc-modules, zlib-modules, lzo-modules, md-
 Priority: extra
 Description: BTRFS filesystem support
  This package contains the BTRFS filesystem module for the kernel.
-
-Package: ext4-modules
-Depends: kernel-image, core-modules, crc-modules
-Provides: ext2-modules, ext3-modules
-Priority: standard
-Description: ext2/ext3/ext4 filesystem support
- This package contains the ext4 filesystem module for the kernel, which
- also supports ext2 and ext3.
-
-Package: isofs-modules
-Depends: kernel-image, nls-core-modules
-Priority: standard
-Description: ISOFS filesystem support
- This package contains the ISOFS filesystem module for the kernel.
 
 Package: jffs2-modules
 Depends: kernel-image, zlib-modules, lzo-modules
@@ -190,16 +151,10 @@ Description: USB storage support
  This package contains the USB storage driver for the kernel.
 
 Package: pcmcia-storage-modules
-Depends: kernel-image, cdrom-core-modules, pcmcia-modules, ata-modules
+Depends: kernel-image, pcmcia-modules
 Priority: standard
 Description: PCMCIA storage drivers
  This package contains PCMCIA storage drivers for the kernel.
-
-Package: fb-modules
-Depends: kernel-image, i2c-modules
-Priority: extra
-Description: Frame buffer support
- This package contains Frame buffer drivers for the kernel.
 
 Package: input-modules
 Depends: kernel-image, usb-modules, i2c-modules
@@ -207,20 +162,14 @@ Priority: extra
 Description: Input devices support
  This package contains input device drivers for the kernel.
 
-Package: event-modules
-Depends: kernel-image
-Priority: extra
-Description: Event support
- This package contains event drivers for the kernel.
-
 Package: mouse-modules
-Depends: kernel-image, event-modules, input-modules, usb-modules
+Depends: kernel-image, input-modules, usb-modules
 Priority: extra
 Description: Mouse support
  This package contains mouse drivers for the kernel.
 
 Package: nic-pcmcia-modules
-Depends: kernel-image, nic-shared-modules, nic-wireless-modules, pcmcia-modules, mmc-core-modules
+Depends: kernel-image, nic-wireless-modules, pcmcia-modules, mmc-core-modules
 Priority: standard
 Description: Common PCMCIA NIC drivers
  This package contains common PCMCIA NIC drivers for the kernel.
@@ -232,13 +181,13 @@ Description: Common PCMCIA drivers
  This package contains common PCMCIA drivers for the kernel.
 
 Package: nic-usb-modules
-Depends: kernel-image, nic-shared-modules, nic-wireless-modules, usb-modules, core-modules, crc-modules
+Depends: kernel-image, nic-wireless-modules, usb-modules, core-modules, crc-modules
 Priority: standard
 Description: USB NIC drivers
  This package contains USB network adapter drivers for the kernel.
 
 Package: sata-modules
-Depends: kernel-image, scsi-core-modules, ata-modules
+Depends: kernel-image, scsi-core-modules
 Priority: standard
 Description: SATA drivers
  This package contains SATA drivers for the kernel.
@@ -286,13 +235,6 @@ Priority: extra
 Description: EFI modules
  This package contains EFI modules.
 
-Package: ata-modules
-Depends: kernel-image, scsi-core-modules
-Priority: extra
-Description: ATA disk modules
- This package contains core ATA disk modules used by both PATA and SATA
- disk drivers.
-
 Package: mmc-core-modules
 Depends: kernel-image, core-modules
 Priority: extra
@@ -312,12 +254,6 @@ Priority: extra
 Description: Network Block Device modules
  This package contains the modules required for support of the Network Block
  Device
-
-Package: squashfs-modules
-Depends: kernel-image
-Priority: extra
-Description: squashfs modules
- This package contains squashfs modules.
 
 Package: speakup-modules
 Depends: kernel-image
@@ -372,12 +308,6 @@ Depends: kernel-image, input-modules, scsi-core-modules
 Priority: extra
 Description: Hyper-V modules
  This package contains Hyper-V paravirtualised drivers for the kernel.
-
-Package: udf-modules
-Depends: kernel-image, crc-modules
-Priority: extra
-Description: UDF modules
- This package contains the UDF filesystem module.
 
 Package: fuse-modules
 Depends: kernel-image

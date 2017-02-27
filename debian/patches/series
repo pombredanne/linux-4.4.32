@@ -6,5 +6,9 @@ debian/gitignore.patch
 debian/mips-disable-werror.patch
 features/all/Kbuild-kconfig-Verbose-version-of-listnewconfig.patch
 debian/modpost-symbol-prefix.patch
+debian/0003-Create-manpages-and-binaries-including-the-version.patch
+debian/0004-Install-perf-scripts-non-executable.patch
 
-loongson-ioremap.patch
+# deepin patches
+deepin/0001-Fix-typo-in-loongson-ioremap.h.patch
+deepin/0002-builddeb-support-building-package-in-mips64-el-platf.patch

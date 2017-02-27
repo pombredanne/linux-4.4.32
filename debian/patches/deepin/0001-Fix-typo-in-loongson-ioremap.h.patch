@@ -1,0 +1,25 @@
+From 73ac5ad132927371b78daf8b37c69f41b8e80e48 Mon Sep 17 00:00:00 2001
+From: Hong Hao <honghao@deepin.com>
+Date: Fri, 20 Jan 2017 23:19:19 +0800
+Subject: [PATCH 1/4] Fix typo in loongson ioremap.h
+
+---
+ arch/mips/include/asm/mach-loongson64/ioremap.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/mips/include/asm/mach-loongson64/ioremap.h b/arch/mips/include/asm/mach-loongson64/ioremap.h
+index 367aca10..155dafe 100644
+--- a/arch/mips/include/asm/mach-loongson64/ioremap.h
++++ b/arch/mips/include/asm/mach-loongson64/ioremap.h
+@@ -24,7 +24,7 @@ static inline phys_addr_t fixup_bigphys_addr(phys_addr_t phys_addr, phys_addr_t
+ static inline void __iomem *plat_ioremap(phys_addr_t offset, unsigned long size,
+ 	unsigned long flags)
+ {
+-#if CONFIG_64BIT
++#ifdef CONFIG_64BIT
+ #define LOONGSON_UNCACHED_ACCEL_BASE _AC(0xb800000000000000, UL)
+ 	u64 base = LOONGSON_UNCACHED_ACCEL_BASE;
+ 
+-- 
+2.9.3
+

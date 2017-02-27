@@ -1,0 +1,26 @@
+From 7d9956d24c70b7f0116cbddabc49fc9b70532e3f Mon Sep 17 00:00:00 2001
+From: Hong Hao <honghao@deepin.com>
+Date: Fri, 20 Jan 2017 23:21:55 +0800
+Subject: [PATCH 2/4] builddeb: support building package in mips64(el)
+ platforms
+
+---
+ scripts/package/builddeb | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/scripts/package/builddeb b/scripts/package/builddeb
+index 6c3b038..bfbaf97 100755
+--- a/scripts/package/builddeb
++++ b/scripts/package/builddeb
+@@ -47,6 +47,8 @@ set_debarch() {
+ 		debarch=$(grep -q CPU_LITTLE_ENDIAN=y $KCONFIG_CONFIG && echo ppc64el || echo powerpc) ;;
+ 	parisc*)
+ 		debarch=hppa ;;
++	mips64*)
++		debarch=mips64$(grep -q CPU_LITTLE_ENDIAN=y $KCONFIG_CONFIG && echo el || true) ;;
+ 	mips*)
+ 		debarch=mips$(grep -q CPU_LITTLE_ENDIAN=y $KCONFIG_CONFIG && echo el || true) ;;
+ 	arm64)
+-- 
+2.9.3
+
