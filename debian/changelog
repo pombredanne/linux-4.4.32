@@ -1,3 +1,10 @@
+linux (4.4.32-1~kui4) testing; urgency=medium
+
+  [ Deepin Loongson Team ]
+  * Enable CONFIG_SCHED_DEBUG
+
+ -- Deepin Loongson Team <mips@deepin.com>  Mon, 27 Feb 2017 18:13:13 +0800
+
 linux (4.4.32-1~kui3) testing; urgency=medium
 
   * Enable CONFIG_PACKET, required by udhcpc
