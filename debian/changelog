@@ -1,3 +1,10 @@
+linux (4.4.32-1~kui5) testing; urgency=medium
+
+  [ deepin mips team ]
+  * Enable CONFIG_USB_ANNOUNCE_NEW_DEVICES
+
+ -- deepin mips team <honghao@deepin.com>  Thu, 15 Jun 2017 21:38:11 +0800
+
 linux (4.4.32-1~kui4) testing; urgency=medium
 
   [ Deepin Loongson Team ]
