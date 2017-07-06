@@ -4,6 +4,8 @@ Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Uploaders: Bastian Blank <waldi@debian.org>, maximilian attems <maks@debian.org>, Ben Hutchings <ben@decadent.org.uk>, Salvatore Bonaccorso <carnil@debian.org>
 Standards-Version: 3.9.8
 Build-Depends:
+ firmware-linux-nonfree,
+# add firmware for amd graphics card
  debhelper (>= 10.1~),
 # used to run debian/bin/*.py
  python3:any,

@@ -236,3 +236,10 @@ firmware/radeon/verde_rlc.bin
 firmware/radeon/VERDE_rlc.bin
 firmware/radeon/verde_smc.bin
 firmware/radeon/VERDE_smc.bin
+firmware/radeon/bonaire_k_smc.bin
+firmware/radeon/hainan_k_smc.bin
+firmware/radeon/hawaii_k_smc.bin
+firmware/radeon/oland_k_smc.bin
+firmware/radeon/pitcairn_k_smc.bin
+firmware/radeon/tahiti_k_smc.bin
+firmware/radeon/verde_k_smc.bin

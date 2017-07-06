@@ -1,3 +1,10 @@
+linux (4.4.32-1~kui6) kui; urgency=medium
+
+  * add build Build-Depends: firmware-linux-nonfree 
+  * fix build failed "file not found: ...RV710_pfp.bin" 
+
+ -- Haitao Pan <panhaitao@deepin.com>  Thu, 06 Jul 2017 10:04:31 +0800
+
 linux (4.4.32-1~kui5) testing; urgency=medium
 
   [ deepin mips team ]
