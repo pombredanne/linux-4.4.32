@@ -1,3 +1,9 @@
+linux (4.4.32-1~kui7) kui; urgency=medium
+
+  * Enable SCSI Device Handlers  
+
+ -- Haitao Pan <panhaitao@deepin.com>  Tue, 08 Aug 2017 11:01:41 +0800
+
 linux (4.4.32-1~kui6) kui; urgency=medium
 
   * add build Build-Depends: firmware-linux-nonfree 
